@@ -1,0 +1,14 @@
+* PSpice Model Editor - Version 22.1.0
+
+*$
+*DEVICE=mydiode,D
+
+* mydiode D model
+* created using Model Editor release 22.1.0 on 05/13/23 at 19:20
+* The Model Editor is a PSpice product.
+.MODEL mydiode D
++ IS=45.167E-12
++ N=3.8782
++ RS=4.5227
+
+*$

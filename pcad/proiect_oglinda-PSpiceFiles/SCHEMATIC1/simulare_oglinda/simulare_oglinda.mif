@@ -1,0 +1,4 @@
+ lib=c:\users\tedy_\desktop\pcad\mydiode.lib, offset=185, size=59
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\ebipolar.lib, offset=6024, size=384
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\opamp.lib, offset=47492, size=417
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\opamp.lib, offset=36402, size=1868

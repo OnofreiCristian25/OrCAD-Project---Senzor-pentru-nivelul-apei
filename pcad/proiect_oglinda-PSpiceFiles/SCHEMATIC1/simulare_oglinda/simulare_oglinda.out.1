@@ -1,0 +1,91 @@
+
+**** 05/22/23 10:51:33 **** PSpice 22.1.0 (6 October 2022) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_oglinda"  [ C:\Users\Tedy_\Desktop\pcad\proiect_oglinda-pspicefiles\schematic1\simulare_oglinda.sim
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulare_oglinda.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../mydiode.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Tedy_\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 28k 13k 1k 
+.WCASE DC V([out2]) YMAX VARY BOTH  HI 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT_OGLINDA
+.EXTERNAL OUTPUT Vcc
+.EXTERNAL OUTPUT -Vcc
+.EXTERNAL OUTPUT Vref1
+.EXTERNAL OUTPUT Vref2
+R_Rs         OUT1 VCC R_Rs {r} TC=0,0 
+.model        R_Rs RES R=1 DEV=1% TC1=0 TC2=0
+R_R1         N00078 VCC R_R1 33k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+Q_Q1         N00078 N00078 0 BC546A 
+Q_Q2         OUT1 N00078 0 BC546A 
+R_R2         N01425 N02883 R_R2 1k TC=0,0 
+.model        R_R2 RES R=1 DEV=1% TC1=0 TC2=0
+R_R5         N01705 N01718 R_R5 2.05k TC=0,0 
+.model        R_R5 RES R=1 DEV=1% TC1=0 TC2=0
+R_R4         VREF1 N01705 R_R4 1k TC=0,0 
+.model        R_R4 RES R=1 DEV=1% TC1=0 TC2=0
+R_R7         N02012 0 R_R7 1k TC=0,0 
+.model        R_R7 RES R=1 DEV=1% TC1=0 TC2=0
+R_R6         N02012 VCC R_R6 4.64k TC=0,0 
+.model        R_R6 RES R=1 DEV=1% TC1=0 TC2=0
+R_R3         0 N02883 R_R3 2.05k TC=0,0 
+.model        R_R3 RES R=1 DEV=1% TC1=0 TC2=0
+V_V1         VCC 0 16V
+V_V2         -VCC 0 -16V
+R_R8         VREF2 N07458 R_R8 1k TC=0,0 
+.model        R_R8 RES R=1 DEV=1% TC1=0 TC2=0
+R_R9         N07458 N07462 R_R9 2.33k TC=0,0 
+.model        R_R9 RES R=1 DEV=1% TC1=0 TC2=0
+R_R10         VCC N07710 R_R10 1k TC=0,0 
+.model        R_R10 RES R=1 DEV=1% TC1=0 TC2=0
+R_R11         0 N07710 R_R11 1.91k TC=0,0 
+.model        R_R11 RES R=1 DEV=1% TC1=0 TC2=0
+R_R12         N08576 N07462 R_R12 700 TC=0,0 
+.model        R_R12 RES R=1 DEV=1% TC1=0 TC2=0
+R_R13         N08448 VCC R_R13 480 TC=0,0 
+.model        R_R13 RES R=1 DEV=1% TC1=0 TC2=0
+D_D1         N08576 0 mydiode 
+D_D2         N09718 0 mydiode 
+V_V3         N09718 0 16V
+R_R14         N07462 N152060 R_R14 770 TC=0,0 
+.model        R_R14 RES R=1 DEV=1% TC1=0 TC2=0
+Q_Q3         N08448 N152060 0 BC546A 
+X_U4A         N02012 VREF1 VCC -VCC VREF1 LM158
+X_U4B         OUT1 N01425 VCC -VCC N01425 LM158
+X_U5A         N02883 N01705 VCC -VCC N01718 LM158
+X_U5B         N07458 N01718 VCC -VCC N07462 LM158
+X_U6A         N07710 VREF2 VCC -VCC VREF2 LM158
+.PARAM  r=13k
+
+**** RESUMING simulare_oglinda.cir ****
+.END
+
+ERROR(ORPSIM-15140): Node out2 is undefined
+
+ERROR(ORPSIM-15142): Node out2 is floating
+
